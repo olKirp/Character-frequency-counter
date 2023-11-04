@@ -1,0 +1,32 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+- url: http://localhost:8081
+paths:
+  /frequencyCounter/count:
+    post:
+      tags:
+      - FrequencyCounterController
+      summary: Подсчитывает частоту встречаемости символов в строке и возвращает результат в виде отсортированной Map
+      operationId: countCharacterFrequency
+      requestBody:
+        description: Строка, в которой подсчитывается частота встречаемости символов
+        content:
+          application/json:
+            schema:
+              type: string
+              example: abc
+              minLength: 1
+        required: true
+      responses:
+        "200":
+          description: Подсчёт успешно завершен. Возвращена Map с вычисленными значениями
+          content:
+            '*/*':
+              schema:
+                type: object
+                additionalProperties:
+                  type: integer
+                  format: int32
