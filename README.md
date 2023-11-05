@@ -1,5 +1,6 @@
 # FrequencyCounter 
-Тестовое задание для компании "Т1 Консалтинг".
+Тестовое задание для компании "Т1 Консалтинг".<br><br>
+[![codecov](https://codecov.io/gh/olKirp/Character-frequency-counter/graph/badge.svg?token=60P5O7WKMH)](https://codecov.io/gh/olKirp/Character-frequency-counter)
 
 ### О приложении
 Приложение подсчитывает, сколько раз в заданной строке встречается каждый символ. Результат отсортировывает по
@@ -51,5 +52,5 @@ aaabbcd
   "d": 1
 }
 ```
-
+Более подробное описание API будет доступно после запуска приложения по ссылке: http://localhost:8081/swagger-ui/index.html#/
 

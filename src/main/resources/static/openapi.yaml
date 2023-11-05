@@ -3,12 +3,12 @@ info:
   title: OpenAPI definition
   version: v0
 servers:
-- url: http://localhost:8081
+  - url: http://localhost:8081
 paths:
   /frequencyCounter/count:
     post:
       tags:
-      - FrequencyCounterController
+        - FrequencyCounterController
       summary: Подсчитывает частоту встречаемости символов в строке и возвращает результат в виде отсортированной Map
       operationId: countCharacterFrequency
       requestBody:
@@ -27,6 +27,6 @@ paths:
             '*/*':
               schema:
                 type: object
-                additionalProperties:
-                  type: integer
-                  format: int32
+                example: {"a": 2, "b": 1, "c": 1}
+        "400":
+          description: Пользователем была передана некорректная строка или в запросе содержатся другие ошибки
